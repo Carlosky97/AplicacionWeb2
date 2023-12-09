@@ -1,0 +1,113 @@
+﻿@model IEnumerable<ConsumoJubile.Models.ClienteViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RutCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NacCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FecCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AFP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DireccionCLiente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CuidadCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observaciones)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RutCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NacCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FecCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AFP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DireccionCLiente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CuidadCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
